@@ -22,7 +22,6 @@ const Shopping = () => {
     setToggleCart({
       state: !toggleCart.state
     })
-    console.log(toggleCart.state)
   }
 
   return (<div>
