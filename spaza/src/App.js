@@ -10,8 +10,8 @@ function App () {
       <header className="App-header">
         React Spaza
       </header>
-      <Shopping />
-      {/* <SignUp /> */}
+      {/* <Shopping /> */}
+      <SignUp />
     </div>
   );
 }

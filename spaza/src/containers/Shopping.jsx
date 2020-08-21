@@ -11,6 +11,10 @@ const Shopping = () => {
   const [advocados, setAdvocados] = useState({ name: "advocados", id: 3, price: 28 });
   const [grapes, setGrapes] = useState({ name: "grapes", id: 4, price: 25 });
   const [lemons, setLemons] = useState({ name: "lemons", id: 5, price: 15 });
+  const [redWine, setRedWine] = useState({ name: "red-wine", id: 6, price: 75 });
+  const [hennessy, setHennessy] = useState({ name: "hennessy", id: 7, price: 2350 });
+  const [whiteWalker, setWhiteWalker] = useState({ name: "white-walker", id: 8, price: 3000 });
+  const [threeShips, setThreeShips] = useState({ name: "three-ships", id: 9, price: 350 })
   const [toggleCart, setToggleCart] = useState({ state: false })
   const dispatch = useDispatch()
 
@@ -59,7 +63,7 @@ const Shopping = () => {
             <img src="https://cdn.pixabay.com/photo/2017/02/05/12/31/lemons-2039830_960_720.jpg" alt="fresh lemons" />
             <br />
             <label>R25 p/k</label>
-            <button onClick={() => dispatch({ type: ADD_TO_CART, payload: grapes })}>add to cart</button>
+            <button onClick={() => dispatch({ type: ADD_TO_CART, payload: lemons })}>add to cart</button>
           </div>
         </div>
         <div className="Drinks">
@@ -68,24 +72,24 @@ const Shopping = () => {
             <img src="https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg" alt="Red Wine" />
             <br />
             <label>R75</label>
-            <button>add to cart</button>
+            <button onClick={() => dispatch({ type: ADD_TO_CART, payload: redWine })}>add to cart</button>
             <div className="Hennessy">
               <img src="https://cdn.shopify.com/s/files/1/0280/3079/5848/products/HennessyXOCognac750ml_500x.jpg?v=1588217622" alt="hennessy" />
               <br />
               <label>R2350</label>
-              <button>add to cart</button>
+              <button onClick={() => dispatch({ type: ADD_TO_CART, payload: hennessy })}>add to cart</button>
             </div>
             <div className="White-walker">
               <img src="https://www.thespiritsbusiness.com/content/http://www.thespiritsbusiness.com/media/2018/10/White-Walker.jpg" alt="White walker whiskey" />
               <br />
               <label>R3000</label>
-              <button>add to cart</button>
+              <button onClick={() => dispatch({ type: ADD_TO_CART, payload: whiteWalker })}>add to cart</button>
             </div>
             <div className="Three-ships">
               <img src="https://cdn.shopify.com/s/files/1/0987/1588/products/three-ships-9yo-fino-finish_600x600.jpg?v=1572250625" alt="Three ships whiskey" />
               <br />
               <label>R350</label>
-              <button>add to cart</button>
+              <button onClick={() => dispatch({ type: ADD_TO_CART, payload: threeShips })}>add to cart</button>
             </div>
           </div>
         </div>

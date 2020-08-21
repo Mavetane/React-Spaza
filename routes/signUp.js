@@ -20,7 +20,6 @@ const users = (router) => {
     var newUser = new usersModel({ email, password })
     try {
       const dbResult = await newUser.save();
-      console.log(dbResult)
       res.sendStatus(201).json(dbResult)
     } catch (e) {
       console.log(e)
