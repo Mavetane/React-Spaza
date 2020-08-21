@@ -62,6 +62,33 @@ const Shopping = () => {
             <button onClick={() => dispatch({ type: ADD_TO_CART, payload: grapes })}>add to cart</button>
           </div>
         </div>
+        <div className="Drinks">
+          <h3>Drinks</h3>
+          <div className="Red-wine">
+            <img src="https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg" alt="Red Wine" />
+            <br />
+            <label>R75</label>
+            <button>add to cart</button>
+            <div className="Hennessy">
+              <img src="https://cdn.shopify.com/s/files/1/0280/3079/5848/products/HennessyXOCognac750ml_500x.jpg?v=1588217622" alt="hennessy" />
+              <br />
+              <label>R2350</label>
+              <button>add to cart</button>
+            </div>
+            <div className="White-walker">
+              <img src="https://www.thespiritsbusiness.com/content/http://www.thespiritsbusiness.com/media/2018/10/White-Walker.jpg" alt="White walker whiskey" />
+              <br />
+              <label>R3000</label>
+              <button>add to cart</button>
+            </div>
+            <div className="Three-ships">
+              <img src="https://cdn.shopify.com/s/files/1/0987/1588/products/three-ships-9yo-fino-finish_600x600.jpg?v=1572250625" alt="Three ships whiskey" />
+              <br />
+              <label>R350</label>
+              <button>add to cart</button>
+            </div>
+          </div>
+        </div>
       </div>
       : <Cart />}
   </div>)

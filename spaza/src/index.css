@@ -13,6 +13,16 @@ body {
   margin: 0vh 0px 0px -185vh;
 }
 
+.Items {
+  background-color: rgb(147, 147, 177);
+  background-size: cover;
+}
+
+.Item-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -66,6 +76,46 @@ code {
 }
 
 .Lemons>img {
+  height: 20vh;
+  width: 25vh;
+  border-radius: 50%;
+}
+
+.Red-wine {
+  margin: 0px 0px 0px -130vh;
+}
+
+.Red-wine>img {
+  height: 20vh;
+  width: 25vh;
+  border-radius: 50%;
+}
+
+.Hennessy {
+  margin: -23vh -80vh 0vh 0vh;
+}
+
+.Hennessy>img {
+  height: 20vh;
+  width: 25vh;
+  border-radius: 50%;
+}
+
+.White-walker {
+  margin: -22vh -150vh 0vh 0vh;
+}
+
+.White-walker>img {
+  height: 20vh;
+  width: 25vh;
+  border-radius: 50%;
+}
+
+.Three-ships {
+  margin: -22vh -230vh 0vh 0vh;
+}
+
+.Three-ships>img {
   height: 20vh;
   width: 25vh;
   border-radius: 50%;
