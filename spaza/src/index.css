@@ -9,6 +9,10 @@ body {
   margin-left: -90vh;
 }
 
+.Cart-button {
+  margin: 0vh 0px 0px -185vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
