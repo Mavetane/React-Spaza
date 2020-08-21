@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SignUp from './containers/SignUp'
+import SignUp from './containers/SignUp';
+import Shopping from './containers/Shopping';
 
 function App () {
   return (
@@ -9,7 +10,8 @@ function App () {
       <header className="App-header">
         React Spaza
       </header>
-      <SignUp />
+      <Shopping />
+      {/* <SignUp /> */}
     </div>
   );
 }

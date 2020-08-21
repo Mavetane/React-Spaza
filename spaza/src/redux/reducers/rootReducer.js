@@ -15,6 +15,7 @@ const rootReducer = (state = initialState, action) => {
     }
     case ADD_TO_CART: {
       const newItem = { cart: [...state.cart, action.payload] }
+      console.log("newItem", newItem);
       return newItem;
     }
     default: {
