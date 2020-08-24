@@ -1,23 +1,8 @@
-const { ADD_USER, ADD_TO_CART } = require("../actions/actionTypes")
+import { combineReducers } from 'redux';
+import authReducer from './autReducer';
 
-const initialState = {
-  carts: [],
-  users: []
-}
+export const rootReducer = combineReducers({
+  auth: authReducer,
+})
 
-
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_USER:
-      const newState = { ...state, users: [...state.users, action.payload] }
-      return newState
-    case ADD_TO_CART:
-      console.log("state.cart", state)
-      const newItem = { ...state, carts: [...state.carts, action.payload] }
-      return newItem;
-    default:
-      return state
-  }
-}
-
-export default rootReducer;
+export default { rootReducer }

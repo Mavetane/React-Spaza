@@ -1,65 +1,41 @@
-import React from 'react';
-import { useState } from 'react';
-import { ADD_USER } from '../redux/actions/actionTypes';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
-import Shopping from './Shopping';
-
-
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { signup } from '../redux/actions/auth';
 
 const SignUp = () => {
-  const [formInfo, setFormInfo] = useState({ email: "", password: "" })
-  const users = useSelector(state => state.users)
-  const dispatch = useDispatch();
-  const [login, setLogin] = useState({ state: false })
+  const [formInfo, setFormInfo] = useState({ password: '', email: '' })
+  const dispatch = useDispatch()
 
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log("formInfo", formInfo)
-    setFormInfo({
-      email: "", password: ""
-    })
-  }
-  const addUser = (formInfo) => {
-    return async () => {
-      try {
-        await axios.post("http://localhost:5000/users/signup", { ...formInfo })
-        dispatch({
-          type: ADD_USER,
-          payload: { formInfo }
-        })
-        setLogin({
-          state: !login.state
-        })
-        console.log(login.state)
-      } catch (e) {
-        console.log(e)
-      }
-    }
+  const submit = () => {
+    console.log(formInfo)
+    dispatch(signup(formInfo))
   }
 
-  const handleChange = (e) => {
-    setFormInfo({
-      ...formInfo, [e.target.name]: e.target.value
-    });
-  }
   return (
     <div>
-      {login.state == false ?
-        <div>
-          <h1>SignUp</h1>
-          <form onSubmit={(e) => onSubmit(e)} method="POST">
-            <label>Email: </label>
-            <input type="email" placeholder="Email" value={formInfo.email} onChange={handleChange} name="email" />
-            <label >Password: </label>
-            <input type="password" placeholder="Password" value={formInfo.password} onChange={handleChange} name="password" />
-            <button onClick={addUser(formInfo)}>Submit</button>
-          </form>
-        </div>
-        : <Shopping />}
-    </div>)
-}
+      <h4>SignUp</h4>
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="email"
+          onChange={(e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value })}
+          value={formInfo.email}
+        />
 
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          onChange={(e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value })}
+          value={formInfo.password}
+        />
+        <button onClick={() => submit(formInfo)}> submit </button>
+      </div>
+    </div>
+  )
+
+}
 
 export default SignUp;

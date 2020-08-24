@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SignUp from './containers/SignUp';
+import { loadRoutes } from './routes/index';
 
 function App () {
   return (
@@ -9,7 +9,7 @@ function App () {
       <header className="App-header">
         React Spaza
       </header>
-      <SignUp />
+      {loadRoutes()}
     </div>
   );
 }
