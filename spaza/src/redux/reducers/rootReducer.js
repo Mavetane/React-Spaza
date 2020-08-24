@@ -1,24 +1,22 @@
 const { ADD_USER, ADD_TO_CART } = require("../actions/actionTypes")
 
 const initialState = {
-  users: [],
-  cart: []
+  carts: [],
+  users: []
 }
 
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_USER: {
-      const newState = { users: [...state.users, action.payload] }
+    case ADD_USER:
+      const newState = { ...state, users: [...state.users, action.payload] }
       return newState
-    }
-    case ADD_TO_CART: {
-      const newItem = { cart: [...state.cart, action.payload] }
+    case ADD_TO_CART:
+      console.log("state.cart", state)
+      const newItem = { ...state, carts: [...state.carts, action.payload] }
       return newItem;
-    }
-    default: {
+    default:
       return state
-    }
   }
 }
 
