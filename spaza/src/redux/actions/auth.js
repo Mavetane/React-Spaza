@@ -4,12 +4,17 @@ import history from '../../routes/history';
 import { AUTH_ERROR, AUTH_SAVE_USER, CHANGE_AUTHORIZATION, LOGOUT_USER } from './actionTypes';
 
 
+function refreshPage () {
+  window.location.reload();
+}
+
 export const logout = () => {
   return dispatch => {
     dispatch({ type: CHANGE_AUTHORIZATION, payload: false })
     dispatch({ type: LOGOUT_USER })
     localStorage.removeItem("token")
     history.push('/')
+    refreshPage()
   }
 }
 
@@ -24,6 +29,7 @@ export const signup = (formInfo) => {
       dispatch({ type: CHANGE_AUTHORIZATION, payload: true })
       localStorage.setItem("token", data.token)
       history.push('/shopping')
+      refreshPage()
     } catch (e) {
       console.log(e)
     }
@@ -44,6 +50,7 @@ export const signin = (loginDetails) => {
       dispatch({ type: CHANGE_AUTHORIZATION, payload: true })
       localStorage.setItem("token", data.token)
       history.push('/shopping')
+      refreshPage()
     } catch (e) {
       console.log(e)
     }

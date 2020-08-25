@@ -8,30 +8,33 @@ const SignUp = () => {
 
 
   const submit = () => {
-    console.log(formInfo)
     dispatch(signup(formInfo))
   }
 
+
   return (
     <div>
-      <h4>SignUp</h4>
-      <div>
-        <input
-          type="email"
-          name="email"
-          placeholder="email"
-          onChange={(e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value })}
-          value={formInfo.email}
-        />
-
-        <input
-          type="password"
-          name="password"
-          placeholder="password"
-          onChange={(e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value })}
-          value={formInfo.password}
-        />
-        <button onClick={() => submit(formInfo)}> submit </button>
+      <div className="box">
+        <span className="text-center">SignUp</span>
+        <div className="input-container">
+          <input
+            type="email"
+            name="email"
+            placeholder="email"
+            onChange={(e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value })}
+            value={formInfo.email}
+          />
+        </div>
+        <div className="input-container">
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            onChange={(e) => setFormInfo({ ...formInfo, [e.target.name]: e.target.value })}
+            value={formInfo.password}
+          />
+        </div>
+        <button className="btn" onClick={() => submit(formInfo)}>submit</button>
       </div>
     </div>
   )

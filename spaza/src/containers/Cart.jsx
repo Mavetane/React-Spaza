@@ -4,16 +4,21 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 const Cart = () => {
-  const cart = useSelector(state => state.cart)
-  console.log("cart");
+  const cart = useSelector(state => state.auth.cart)
+  var total = cart.reduce((accum, item) => accum + item.price, 0)
+
+  var items = cart.map(item =>
+    (<div key={item.id}>
+      <label className="Item-name">{item.name}: R <strong>{item.price}</strong></label>
+    </div>)
+  )
+
+
   return (<div className="Items">
-    <h1>Cart</h1>
-    {cart.map(item =>
-      <div className="Item" key={item.id}>
-        <label className="Item-name">{item.name}</label><br />
-        <label> R{item.price}</label>
-      </div>
-    )}
+    <h2>Total: <strong>R {total}</strong></h2>
+    <div className="Item">
+      <p>{items}</p>
+    </div>
   </div>)
 }
 

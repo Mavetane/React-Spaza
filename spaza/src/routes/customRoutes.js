@@ -42,6 +42,9 @@ export const PrivateRoute = ({
   );
 }
 
+function refreshPage () {
+  window.location.reload();
+}
 
 export const PublicRoute = ({
   component: Component,

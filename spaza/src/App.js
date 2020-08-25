@@ -6,9 +6,6 @@ import { loadRoutes } from './routes/index';
 function App () {
   return (
     <div className="App">
-      <header className="App-header">
-        React Spaza
-      </header>
       {loadRoutes()}
     </div>
   );

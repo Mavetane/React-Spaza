@@ -1,8 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+.Shop-header>i {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-right: 100rem;
+  /* background-color: #6e6d6d; */
+  margin: -8px -10px 0px -10vh;
+  height: 9vh;
+  /* color: white; */
+}
+
+.Products {
+  margin: 0px 20vh 0px 20vh;
+}
+
+.Navbar {
+  margin-left: 90rem;
+}
+
+.Navbar>i {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.Navbar>i:hover {
+  color: blue;
+}
+
+.LandingPage {
+  background-image: url("https://cdn.pixabay.com/photo/2018/08/29/17/07/ecommerce-3640321_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.Products>h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
 }
 
 .Online {
@@ -14,12 +47,22 @@ body {
 }
 
 .Items {
-  background-color: rgb(147, 147, 177);
   background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding-left: 15px;
+  height: auto;
+}
+
+.Items>h4 {
+  padding-right: 100rem;
+}
+
+.Item>p {
+  padding: 20px;
 }
 
 .Item-name {
-  font-weight: bold;
   font-size: 20px;
 }
 
@@ -27,96 +70,223 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.Drinks {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.Drinks>div {
+  text-align: center;
+  padding: 20px;
+  border-style: ridge;
+}
+
+.Drinks>div>i {
+  font-size: 20px;
+}
+
+.Drinks>div>i:hover {
+  font-size: 22px;
+  cursor: pointer;
+}
+
 .Fruits {
-  background-color: rgb(223, 157, 223);
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.Fruits>div {
+  text-align: center;
+  padding: 20px;
+  border-style: ridge;
+}
+
+.Fruits>div>i {
+  font-size: 20px;
+}
+
+.Fruits>div>i:hover {
+  cursor: pointer;
+  font-size: 22px;
 }
 
 .Apples {
-  margin: 0px 0px 0px -130vh;
+  /* margin: 0px 0px 0px -130vh; */
 }
 
 .Apples>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .Bannas {
-  margin: -22vh 0px 0px -70vh;
+  /* margin: -22vh 0px 0px -70vh; */
 }
 
 .Bannas>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .Advocados {
-  margin: -22vh 0px 0px 0px;
+  /* margin: -22vh 0px 0px 0px; */
 }
 
 .Advocados>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
+}
+
+.Strawberries>img {
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .Grapes {
-  margin: -22vh -70vh 0px 0px;
+  /* margin: -22vh -70vh 0px 0px; */
 }
 
 .Grapes>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .Lemons {
-  margin: -22vh -130vh 0px 0px;
+  /* margin: -22vh -130vh 0px 0px; */
 }
 
 .Lemons>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .Red-wine {
-  margin: 0px 0px 0px -130vh;
+  /* margin: 0px 0px 0px -80vh; */
 }
 
 .Red-wine>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .Hennessy {
-  margin: -23vh -80vh 0vh 0vh;
+  /* margin: -32vh -160vh 0vh 0vh; */
 }
 
 .Hennessy>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .White-walker {
-  margin: -22vh -150vh 0vh 0vh;
+  /* margin: 10vh 0vh 0vh 5vh; */
 }
 
 .White-walker>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
 }
 
 .Three-ships {
-  margin: -22vh -230vh 0vh 0vh;
+  /* margin: -30vh -160vh 0vh 0vh; */
 }
 
 .Three-ships>img {
-  height: 20vh;
-  width: 25vh;
-  border-radius: 50%;
+  height: 30vh;
+  width: 35vh;
+  border-radius: 80%;
+}
+
+/* SignUp */
+
+.text-center {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin: -50px 0 80px 0;
+  display: block;
+  text-align: center;
+}
+
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  /* pointer-event: none; */
+  transition: all 0.5s ease-in-out;
+}
+
+.input-container input {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.input-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e74c3c;
+}
+
+.btn {
+  color: #fff;
+  background-color: #e74c3c;
+  outline: none;
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.50);
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.input-container input:focus~label, .input-container input:valid~label {
+  top: -12px;
+  font-size: 12px;
 }
