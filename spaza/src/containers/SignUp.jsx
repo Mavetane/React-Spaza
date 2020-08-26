@@ -13,7 +13,7 @@ const SignUp = () => {
 
 
   return (
-    <div>
+    <div className="Sign-up">
       <div className="box">
         <span className="text-center">SignUp</span>
         <div className="input-container">

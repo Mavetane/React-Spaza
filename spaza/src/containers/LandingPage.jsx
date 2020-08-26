@@ -10,9 +10,6 @@ const LandingPage = () => {
       Kasi's Online Spaza
     <Navbar />
     </header>
-    <h1>Landing Page</h1>
-
-
   </div>)
 }
 

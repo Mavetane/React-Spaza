@@ -13,27 +13,29 @@ const Login = () => {
   }
 
   return (
-    <div className="box">
-      <form onSubmit={(e) => submit(e)}>
-        <span className="text-center">SignIn</span>
-        <div className="input-container">
-          <input type="text"
-            placeholder="email"
-            value={loginDetails.email}
-            name="email"
-            onChange={(e) => setloginData({ ...loginDetails, [e.target.name]: e.target.value })} />
-        </div>
-        <div className="input-container">
-          <input type="password"
-            value={loginDetails.password}
-            onChange={(e) => setloginData({ ...loginDetails, [e.target.name]: e.target.value })}
-            name="password"
-            placeholder="password" />
-          <br />
-          <p style={{ color: "red" }}>{error} </p>
-        </div>
-        <input type="submit" class="btn" />
-      </form>
+    <div className="Sign-up">
+      <div className="box">
+        <form onSubmit={(e) => submit(e)}>
+          <span className="text-center">SignIn</span>
+          <div className="input-container">
+            <input type="text"
+              placeholder="email"
+              value={loginDetails.email}
+              name="email"
+              onChange={(e) => setloginData({ ...loginDetails, [e.target.name]: e.target.value })} />
+          </div>
+          <div className="input-container">
+            <input type="password"
+              value={loginDetails.password}
+              onChange={(e) => setloginData({ ...loginDetails, [e.target.name]: e.target.value })}
+              name="password"
+              placeholder="password" />
+            <br />
+            <p style={{ color: "red" }}>{error} </p>
+          </div>
+          <input type="submit" class="btn" />
+        </form>
+      </div>
     </div>
   )
 }

@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ADD_TO_CART } from '../redux/actions/actionTypes';
 import Cart from './Cart';
+import { logout } from '../redux/actions/auth'
+
 
 
 const Shopping = () => {
@@ -14,12 +16,11 @@ const Shopping = () => {
   const [RedWine, setRedWine] = useState({ name: "Red-wine", id: 6, price: 75 });
   const [Hennessy, setHennessy] = useState({ name: "Hennessy", id: 7, price: 2350 });
   const [WhiteWalker, setWhiteWalker] = useState({ name: "White-walker", id: 8, price: 3000 });
-  const [ThreeShips, setThreeShips] = useState({ name: "Three-ships", id: 9, price: 350 })
-  const [StrawBerries, setStrawberries] = useState({ name: "Strawberries", id: 10, price: 32 })
-  const [toggleCart, setToggleCart] = useState({ state: false })
-  const dispatch = useDispatch()
-  const count = useSelector(state => state.auth.count)
-
+  const [ThreeShips, setThreeShips] = useState({ name: "Three-ships", id: 9, price: 350 });
+  const [StrawBerries, setStrawberries] = useState({ name: "Strawberries", id: 10, price: 32 });
+  const [toggleCart, setToggleCart] = useState({ state: false });
+  const dispatch = useDispatch();
+  const count = useSelector(state => state.auth.count);
 
   const showCart = () => {
     setToggleCart({
@@ -28,9 +29,9 @@ const Shopping = () => {
   }
 
   return (<div>
-
     <header className="Shop-header">
       <i class="fas fa-shopping-cart" onClick={showCart}>{count}</i>
+      <a onClick={() => dispatch(logout())}> Logout</a>
     </header>
     {toggleCart.state == false ?
       <div className="Products">
