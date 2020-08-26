@@ -8,16 +8,16 @@ import { logout } from '../redux/actions/auth'
 
 
 const Shopping = () => {
-  const [Apples, setAppleValue] = useState({ name: "Apples", id: 1, price: 22 });
-  const [Bananas, setBanana] = useState({ name: "Bananas", id: 2, price: 18 });
-  const [Advocados, setAdvocados] = useState({ name: "Advocados", id: 3, price: 28 });
-  const [Grapes, setGrapes] = useState({ name: "Grapes", id: 4, price: 25 });
-  const [Lemons, setLemons] = useState({ name: "Lemons", id: 5, price: 15 });
-  const [RedWine, setRedWine] = useState({ name: "Red-wine", id: 6, price: 75 });
-  const [Hennessy, setHennessy] = useState({ name: "Hennessy", id: 7, price: 2350 });
-  const [WhiteWalker, setWhiteWalker] = useState({ name: "White-walker", id: 8, price: 3000 });
-  const [ThreeShips, setThreeShips] = useState({ name: "Three-ships", id: 9, price: 350 });
-  const [StrawBerries, setStrawberries] = useState({ name: "Strawberries", id: 10, price: 32 });
+  const [Apples] = useState({ name: "Apples", id: 1, price: 22 });
+  const [Bananas] = useState({ name: "Bananas", id: 2, price: 18 });
+  const [Advocados] = useState({ name: "Advocados", id: 3, price: 28 });
+  const [Grapes] = useState({ name: "Grapes", id: 4, price: 25 });
+  const [Lemons] = useState({ name: "Lemons", id: 5, price: 15 });
+  const [RedWine] = useState({ name: "Red-wine", id: 6, price: 75 });
+  const [Hennessy] = useState({ name: "Hennessy", id: 7, price: 2350 });
+  const [WhiteWalker] = useState({ name: "White-walker", id: 8, price: 3000 });
+  const [ThreeShips] = useState({ name: "Three-ships", id: 9, price: 350 });
+  const [StrawBerries] = useState({ name: "Strawberries", id: 10, price: 32 });
   const [toggleCart, setToggleCart] = useState({ state: false });
   const dispatch = useDispatch();
   const count = useSelector(state => state.auth.count);
@@ -73,7 +73,7 @@ const Shopping = () => {
             <label>Only: <strong>R28 per/kg</strong></label>
           </div>
           <div className="Grapes">
-            <img src="https://cdn.pixabay.com/photo/2019/09/22/12/37/grapes-4495944_960_720.jpg" alt="fresh grapes" />
+            <img src="https://media.istockphoto.com/photos/black-grapes-on-white-background-picture-id1172892916" alt="fresh grapes" />
             <br />
             <i class="fas fa-shopping-cart" onClick={() => dispatch({ type: ADD_TO_CART, payload: Grapes })}>Add to cart</i>
             <br />

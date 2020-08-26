@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
 .Shop-header {
   background-color: #6e6d6d;
-  height: 10vh;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-content: center;
+  flex-direction: row;
 }
 
 .Shop-header>i {
+  margin-top: 8px;
   font-size: 30px;
-  margin-top: 20px;
-  padding-right: 10px;
-  margin-right: 100rem;
+  padding-right: 10vh;
   color: white;
+  /* text-align: center; */
 }
 
 .Shop-header>a {
   color: white;
   cursor: pointer;
   font-size: 15px;
+  margin-top: 8px;
+  padding-right: 10vh;
 }
 
 .Shop-header>a:hover {
@@ -82,7 +89,7 @@
 .Items {
   background-size: cover;
   background-repeat: no-repeat;
-  text-align: left;
+  text-align: center;
   padding-left: 15px;
   height: auto;
 }
@@ -92,15 +99,22 @@
 }
 
 .Item {
-  padding: 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  grid-gap: 10px;
 }
 
-.Item>p {
+.Item>p>div {
   margin: 30px;
+  text-align: center;
+  padding: 20px;
+  border-style: ridge;
 }
 
 .Item-name {
   font-size: 20px;
+  height: 10vh;
 }
 
 code {
@@ -151,28 +165,16 @@ code {
   font-size: 22px;
 }
 
-.Apples {
-  /* margin: 0px 0px 0px -130vh; */
-}
-
 .Apples>img {
   height: 30vh;
   width: 35vh;
   border-radius: 80%;
 }
 
-.Bannas {
-  /* margin: -22vh 0px 0px -70vh; */
-}
-
 .Bannas>img {
   height: 30vh;
   width: 35vh;
   border-radius: 80%;
-}
-
-.Advocados {
-  /* margin: -22vh 0px 0px 0px; */
 }
 
 .Advocados>img {
@@ -187,18 +189,10 @@ code {
   border-radius: 80%;
 }
 
-.Grapes {
-  /* margin: -22vh -70vh 0px 0px; */
-}
-
 .Grapes>img {
   height: 30vh;
   width: 35vh;
   border-radius: 80%;
-}
-
-.Lemons {
-  /* margin: -22vh -130vh 0px 0px; */
 }
 
 .Lemons>img {
@@ -207,18 +201,10 @@ code {
   border-radius: 80%;
 }
 
-.Red-wine {
-  /* margin: 0px 0px 0px -80vh; */
-}
-
 .Red-wine>img {
   height: 30vh;
   width: 35vh;
   border-radius: 80%;
-}
-
-.Hennessy {
-  /* margin: -32vh -160vh 0vh 0vh; */
 }
 
 .Hennessy>img {
@@ -227,18 +213,10 @@ code {
   border-radius: 80%;
 }
 
-.White-walker {
-  /* margin: 10vh 0vh 0vh 5vh; */
-}
-
 .White-walker>img {
   height: 30vh;
   width: 35vh;
   border-radius: 80%;
-}
-
-.Three-ships {
-  /* margin: -30vh -160vh 0vh 0vh; */
 }
 
 .Three-ships>img {
